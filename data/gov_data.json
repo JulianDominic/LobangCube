@@ -1,0 +1,632 @@
+{
+    "help": "https://data.gov.sg/api/3/action/help_show?name=datastore_search",
+    "success": true,
+    "result": {
+        "resource_id": "d_2e7d2eef487f6d0d5bfa1df2d41bcae0",
+        "fields": [
+            {
+                "type": "numeric",
+                "id": "yr"
+            },
+            {
+                "type": "text",
+                "id": "regrossed_bal_grp"
+            },
+            {
+                "type": "numeric",
+                "id": "regrossed_bal_amt"
+            },
+            {
+                "type": "int4",
+                "id": "_id"
+            }
+        ],
+        "records": [
+            {
+                "_id": 1,
+                "yr": "2014",
+                "regrossed_bal_grp": "Below 1,000",
+                "regrossed_bal_amt": "18180000"
+            },
+            {
+                "_id": 2,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 1,000 to below 2,000",
+                "regrossed_bal_amt": "34570000"
+            },
+            {
+                "_id": 3,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 2,000 to below 3,000",
+                "regrossed_bal_amt": "47048000"
+            },
+            {
+                "_id": 4,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 3,000 to below 4,000",
+                "regrossed_bal_amt": "55277000"
+            },
+            {
+                "_id": 5,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 4,000 to below 5,000",
+                "regrossed_bal_amt": "64417000"
+            },
+            {
+                "_id": 6,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 5,000 to below 6,000",
+                "regrossed_bal_amt": "73453000"
+            },
+            {
+                "_id": 7,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 6,000 to below 7,000",
+                "regrossed_bal_amt": "80243000"
+            },
+            {
+                "_id": 8,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 7,000 to below 8,000",
+                "regrossed_bal_amt": "88482000"
+            },
+            {
+                "_id": 9,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 8,000 to below 9,000",
+                "regrossed_bal_amt": "93182000"
+            },
+            {
+                "_id": 10,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 9,000 to below 10,000",
+                "regrossed_bal_amt": "100273000"
+            },
+            {
+                "_id": 11,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 10,000 to below 20,000",
+                "regrossed_bal_amt": "1383491000"
+            },
+            {
+                "_id": 12,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 20,000 to below 30,000",
+                "regrossed_bal_amt": "2012909000"
+            },
+            {
+                "_id": 13,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 30,000 to below 40,000",
+                "regrossed_bal_amt": "2577236000"
+            },
+            {
+                "_id": 14,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 40,000 to below 50,000",
+                "regrossed_bal_amt": "3220954000"
+            },
+            {
+                "_id": 15,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 50,000 to below 60,000",
+                "regrossed_bal_amt": "3703221000"
+            },
+            {
+                "_id": 16,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 60,000 to below 70,000",
+                "regrossed_bal_amt": "4219284000"
+            },
+            {
+                "_id": 17,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 70,000 to below 80,000",
+                "regrossed_bal_amt": "4645491000"
+            },
+            {
+                "_id": 18,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 80,000 to below 90,000",
+                "regrossed_bal_amt": "5060005000"
+            },
+            {
+                "_id": 19,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 90,000 to below 100,000",
+                "regrossed_bal_amt": "5329368000"
+            },
+            {
+                "_id": 20,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 100,000 to below 150,000",
+                "regrossed_bal_amt": "29863272000"
+            },
+            {
+                "_id": 21,
+                "yr": "2014",
+                "regrossed_bal_grp": "From 150,000 & above",
+                "regrossed_bal_amt": "310638912000"
+            },
+            {
+                "_id": 22,
+                "yr": "2015",
+                "regrossed_bal_grp": "Below 1,000",
+                "regrossed_bal_amt": "14330000"
+            },
+            {
+                "_id": 23,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 1,000 to below 2,000",
+                "regrossed_bal_amt": "30995000"
+            },
+            {
+                "_id": 24,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 2,000 to below 3,000",
+                "regrossed_bal_amt": "42646000"
+            },
+            {
+                "_id": 25,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 3,000 to below 4,000",
+                "regrossed_bal_amt": "51402000"
+            },
+            {
+                "_id": 26,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 4,000 to below 5,000",
+                "regrossed_bal_amt": "59254000"
+            },
+            {
+                "_id": 27,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 5,000 to below 6,000",
+                "regrossed_bal_amt": "66647000"
+            },
+            {
+                "_id": 28,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 6,000 to below 7,000",
+                "regrossed_bal_amt": "74680000"
+            },
+            {
+                "_id": 29,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 7,000 to below 8,000",
+                "regrossed_bal_amt": "80947000"
+            },
+            {
+                "_id": 30,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 8,000 to below 9,000",
+                "regrossed_bal_amt": "84651000"
+            },
+            {
+                "_id": 31,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 9,000 to below 10,000",
+                "regrossed_bal_amt": "91370000"
+            },
+            {
+                "_id": 32,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 10,000 to below 20,000",
+                "regrossed_bal_amt": "1292888000"
+            },
+            {
+                "_id": 33,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 20,000 to below 30,000",
+                "regrossed_bal_amt": "1958113000"
+            },
+            {
+                "_id": 34,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 30,000 to below 40,000",
+                "regrossed_bal_amt": "2528237000"
+            },
+            {
+                "_id": 35,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 40,000 to below 50,000",
+                "regrossed_bal_amt": "3096462000"
+            },
+            {
+                "_id": 36,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 50,000 to below 60,000",
+                "regrossed_bal_amt": "3573173000"
+            },
+            {
+                "_id": 37,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 60,000 to below 70,000",
+                "regrossed_bal_amt": "4037439000"
+            },
+            {
+                "_id": 38,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 70,000 to below 80,000",
+                "regrossed_bal_amt": "4441876000"
+            },
+            {
+                "_id": 39,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 80,000 to below 90,000",
+                "regrossed_bal_amt": "4950959000"
+            },
+            {
+                "_id": 40,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 90,000 to below 100,000",
+                "regrossed_bal_amt": "5242264000"
+            },
+            {
+                "_id": 41,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 100,000 to below 150,000",
+                "regrossed_bal_amt": "30084363000"
+            },
+            {
+                "_id": 42,
+                "yr": "2015",
+                "regrossed_bal_grp": "From 150,000 & above",
+                "regrossed_bal_amt": "335736068000"
+            },
+            {
+                "_id": 43,
+                "yr": "2016",
+                "regrossed_bal_grp": "Below 1,000",
+                "regrossed_bal_amt": "13416000"
+            },
+            {
+                "_id": 44,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 1,000 to below 2,000",
+                "regrossed_bal_amt": "28534000"
+            },
+            {
+                "_id": 45,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 2,000 to below 3,000",
+                "regrossed_bal_amt": "39496000"
+            },
+            {
+                "_id": 46,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 3,000 to below 4,000",
+                "regrossed_bal_amt": "46405000"
+            },
+            {
+                "_id": 47,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 4,000 to below 5,000",
+                "regrossed_bal_amt": "54135000"
+            },
+            {
+                "_id": 48,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 5,000 to below 6,000",
+                "regrossed_bal_amt": "61877000"
+            },
+            {
+                "_id": 49,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 6,000 to below 7,000",
+                "regrossed_bal_amt": "69919000"
+            },
+            {
+                "_id": 50,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 7,000 to below 8,000",
+                "regrossed_bal_amt": "74072000"
+            },
+            {
+                "_id": 51,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 8,000 to below 9,000",
+                "regrossed_bal_amt": "80395000"
+            },
+            {
+                "_id": 52,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 9,000 to below 10,000",
+                "regrossed_bal_amt": "85545000"
+            },
+            {
+                "_id": 53,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 10,000 to below 20,000",
+                "regrossed_bal_amt": "1194405000"
+            },
+            {
+                "_id": 54,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 20,000 to below 30,000",
+                "regrossed_bal_amt": "1845802000"
+            },
+            {
+                "_id": 55,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 30,000 to below 40,000",
+                "regrossed_bal_amt": "2440344000"
+            },
+            {
+                "_id": 56,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 40,000 to below 50,000",
+                "regrossed_bal_amt": "2945793000"
+            },
+            {
+                "_id": 57,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 50,000 to below 60,000",
+                "regrossed_bal_amt": "3470483000"
+            },
+            {
+                "_id": 58,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 60,000 to below 70,000",
+                "regrossed_bal_amt": "3947402000"
+            },
+            {
+                "_id": 59,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 70,000 to below 80,000",
+                "regrossed_bal_amt": "4290701000"
+            },
+            {
+                "_id": 60,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 80,000 to below 90,000",
+                "regrossed_bal_amt": "4783052000"
+            },
+            {
+                "_id": 61,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 90,000 to below 100,000",
+                "regrossed_bal_amt": "5114081000"
+            },
+            {
+                "_id": 62,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 100,000 to below 150,000",
+                "regrossed_bal_amt": "29650813000"
+            },
+            {
+                "_id": 63,
+                "yr": "2016",
+                "regrossed_bal_grp": "From 150,000 & above",
+                "regrossed_bal_amt": "365040085000"
+            },
+            {
+                "_id": 64,
+                "yr": "2017",
+                "regrossed_bal_grp": "Below 1,000",
+                "regrossed_bal_amt": "12375000"
+            },
+            {
+                "_id": 65,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 1,000 to below 2,000",
+                "regrossed_bal_amt": "25403000"
+            },
+            {
+                "_id": 66,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 2,000 to below 3,000",
+                "regrossed_bal_amt": "38454000"
+            },
+            {
+                "_id": 67,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 3,000 to below 4,000",
+                "regrossed_bal_amt": "45838000"
+            },
+            {
+                "_id": 68,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 4,000 to below 5,000",
+                "regrossed_bal_amt": "53403000"
+            },
+            {
+                "_id": 69,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 5,000 to below 6,000",
+                "regrossed_bal_amt": "60622000"
+            },
+            {
+                "_id": 70,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 6,000 to below 7,000",
+                "regrossed_bal_amt": "67219000"
+            },
+            {
+                "_id": 71,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 7,000 to below 8,000",
+                "regrossed_bal_amt": "70336000"
+            },
+            {
+                "_id": 72,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 8,000 to below 9,000",
+                "regrossed_bal_amt": "78543000"
+            },
+            {
+                "_id": 73,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 9,000 to below 10,000",
+                "regrossed_bal_amt": "80694000"
+            },
+            {
+                "_id": 74,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 10,000 to below 20,000",
+                "regrossed_bal_amt": "1101112000"
+            },
+            {
+                "_id": 75,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 20,000 to below 30,000",
+                "regrossed_bal_amt": "1711309000"
+            },
+            {
+                "_id": 76,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 30,000 to below 40,000",
+                "regrossed_bal_amt": "2318142000"
+            },
+            {
+                "_id": 77,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 40,000 to below 50,000",
+                "regrossed_bal_amt": "2791032000"
+            },
+            {
+                "_id": 78,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 50,000 to below 60,000",
+                "regrossed_bal_amt": "3414150000"
+            },
+            {
+                "_id": 79,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 60,000 to below 70,000",
+                "regrossed_bal_amt": "3796866000"
+            },
+            {
+                "_id": 80,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 70,000 to below 80,000",
+                "regrossed_bal_amt": "4187998000"
+            },
+            {
+                "_id": 81,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 80,000 to below 90,000",
+                "regrossed_bal_amt": "4586654000"
+            },
+            {
+                "_id": 82,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 90,000 to below 100,000",
+                "regrossed_bal_amt": "4966637000"
+            },
+            {
+                "_id": 83,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 100,000 to below 150,000",
+                "regrossed_bal_amt": "29121553000"
+            },
+            {
+                "_id": 84,
+                "yr": "2017",
+                "regrossed_bal_grp": "From 150,000 & above",
+                "regrossed_bal_amt": "395624312000"
+            },
+            {
+                "_id": 85,
+                "yr": "2018",
+                "regrossed_bal_grp": "Below 1,000",
+                "regrossed_bal_amt": "12816000"
+            },
+            {
+                "_id": 86,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 1,000 to below 2,000",
+                "regrossed_bal_amt": "24492000"
+            },
+            {
+                "_id": 87,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 2,000 to below 3,000",
+                "regrossed_bal_amt": "34822000"
+            },
+            {
+                "_id": 88,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 3,000 to below 4,000",
+                "regrossed_bal_amt": "41939000"
+            },
+            {
+                "_id": 89,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 4,000 to below 5,000",
+                "regrossed_bal_amt": "49026000"
+            },
+            {
+                "_id": 90,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 5,000 to below 6,000",
+                "regrossed_bal_amt": "55622000"
+            },
+            {
+                "_id": 91,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 6,000 to below 7,000",
+                "regrossed_bal_amt": "62490000"
+            },
+            {
+                "_id": 92,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 7,000 to below 8,000",
+                "regrossed_bal_amt": "66697000"
+            },
+            {
+                "_id": 93,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 8,000 to below 9,000",
+                "regrossed_bal_amt": "74102000"
+            },
+            {
+                "_id": 94,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 9,000 to below 10,000",
+                "regrossed_bal_amt": "77362000"
+            },
+            {
+                "_id": 95,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 10,000 to below 20,000",
+                "regrossed_bal_amt": "1060946000"
+            },
+            {
+                "_id": 96,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 20,000 to below 30,000",
+                "regrossed_bal_amt": "1630749000"
+            },
+            {
+                "_id": 97,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 30,000 to below 40,000",
+                "regrossed_bal_amt": "2191534000"
+            },
+            {
+                "_id": 98,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 40,000 to below 50,000",
+                "regrossed_bal_amt": "2693754000"
+            },
+            {
+                "_id": 99,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 50,000 to below 60,000",
+                "regrossed_bal_amt": "3278218000"
+            },
+            {
+                "_id": 100,
+                "yr": "2018",
+                "regrossed_bal_grp": "From 60,000 to below 70,000",
+                "regrossed_bal_amt": "3650898000"
+            }
+        ],
+        "_links": {
+            "start": "/api/action/datastore_search?resource_id=d_2e7d2eef487f6d0d5bfa1df2d41bcae0",
+            "next": "/api/action/datastore_search?resource_id=d_2e7d2eef487f6d0d5bfa1df2d41bcae0&offset=100"
+        },
+        "total": 105
+    }
+}
