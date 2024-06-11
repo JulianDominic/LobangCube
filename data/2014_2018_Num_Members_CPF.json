@@ -1,0 +1,736 @@
+{
+    "help": "https://data.gov.sg/api/3/action/help_show?name=datastore_search",
+    "success": true,
+    "result": {
+        "resource_id": "d_782612851622c1643f94e3789d333e99",
+        "fields": [
+            {
+                "type": "numeric",
+                "id": "yr"
+            },
+            {
+                "type": "text",
+                "id": "age_grp"
+            },
+            {
+                "type": "text",
+                "id": "gender"
+            },
+            {
+                "type": "text",
+                "id": "no_of_mbrs"
+            },
+            {
+                "type": "int4",
+                "id": "_id"
+            }
+        ],
+        "records": [
+            {
+                "_id": 1,
+                "yr": "2014",
+                "age_grp": "Up to 20",
+                "gender": "Male",
+                "no_of_mbrs": "62000"
+            },
+            {
+                "_id": 2,
+                "yr": "2014",
+                "age_grp": "Up to 20",
+                "gender": "Female",
+                "no_of_mbrs": "61000"
+            },
+            {
+                "_id": 3,
+                "yr": "2014",
+                "age_grp": "Up to 20",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 4,
+                "yr": "2014",
+                "age_grp": ">20 - 25",
+                "gender": "Male",
+                "no_of_mbrs": "119000"
+            },
+            {
+                "_id": 5,
+                "yr": "2014",
+                "age_grp": ">20 - 25",
+                "gender": "Female",
+                "no_of_mbrs": "122000"
+            },
+            {
+                "_id": 6,
+                "yr": "2014",
+                "age_grp": ">20 - 25",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 7,
+                "yr": "2014",
+                "age_grp": ">25 - 30",
+                "gender": "Male",
+                "no_of_mbrs": "130000"
+            },
+            {
+                "_id": 8,
+                "yr": "2014",
+                "age_grp": ">25 - 30",
+                "gender": "Female",
+                "no_of_mbrs": "136000"
+            },
+            {
+                "_id": 9,
+                "yr": "2014",
+                "age_grp": ">25 - 30",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 10,
+                "yr": "2014",
+                "age_grp": ">30 - 35",
+                "gender": "Male",
+                "no_of_mbrs": "145000"
+            },
+            {
+                "_id": 11,
+                "yr": "2014",
+                "age_grp": ">30 - 35",
+                "gender": "Female",
+                "no_of_mbrs": "155000"
+            },
+            {
+                "_id": 12,
+                "yr": "2014",
+                "age_grp": ">30 - 35",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 13,
+                "yr": "2014",
+                "age_grp": ">35 - 40",
+                "gender": "Male",
+                "no_of_mbrs": "157000"
+            },
+            {
+                "_id": 14,
+                "yr": "2014",
+                "age_grp": ">35 - 40",
+                "gender": "Female",
+                "no_of_mbrs": "162000"
+            },
+            {
+                "_id": 15,
+                "yr": "2014",
+                "age_grp": ">35 - 40",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 16,
+                "yr": "2014",
+                "age_grp": ">40 - 45",
+                "gender": "Male",
+                "no_of_mbrs": "173000"
+            },
+            {
+                "_id": 17,
+                "yr": "2014",
+                "age_grp": ">40 - 45",
+                "gender": "Female",
+                "no_of_mbrs": "174000"
+            },
+            {
+                "_id": 18,
+                "yr": "2014",
+                "age_grp": ">40 - 45",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 19,
+                "yr": "2014",
+                "age_grp": ">45 - 50",
+                "gender": "Male",
+                "no_of_mbrs": "192000"
+            },
+            {
+                "_id": 20,
+                "yr": "2014",
+                "age_grp": ">45 - 50",
+                "gender": "Female",
+                "no_of_mbrs": "182000"
+            },
+            {
+                "_id": 21,
+                "yr": "2014",
+                "age_grp": ">45 - 50",
+                "gender": "Unspecified",
+                "no_of_mbrs": "100"
+            },
+            {
+                "_id": 22,
+                "yr": "2014",
+                "age_grp": ">50 - 55",
+                "gender": "Male",
+                "no_of_mbrs": "214000"
+            },
+            {
+                "_id": 23,
+                "yr": "2014",
+                "age_grp": ">50 - 55",
+                "gender": "Female",
+                "no_of_mbrs": "185000"
+            },
+            {
+                "_id": 24,
+                "yr": "2014",
+                "age_grp": ">50 - 55",
+                "gender": "Unspecified",
+                "no_of_mbrs": "200"
+            },
+            {
+                "_id": 25,
+                "yr": "2014",
+                "age_grp": ">55 - 60",
+                "gender": "Male",
+                "no_of_mbrs": "183000"
+            },
+            {
+                "_id": 26,
+                "yr": "2014",
+                "age_grp": ">55 - 60",
+                "gender": "Female",
+                "no_of_mbrs": "165000"
+            },
+            {
+                "_id": 27,
+                "yr": "2014",
+                "age_grp": ">55 - 60",
+                "gender": "Unspecified",
+                "no_of_mbrs": "100"
+            },
+            {
+                "_id": 28,
+                "yr": "2014",
+                "age_grp": "Above 60",
+                "gender": "Male",
+                "no_of_mbrs": "385000"
+            },
+            {
+                "_id": 29,
+                "yr": "2014",
+                "age_grp": "Above 60",
+                "gender": "Female",
+                "no_of_mbrs": "393000"
+            },
+            {
+                "_id": 30,
+                "yr": "2014",
+                "age_grp": "Above 60",
+                "gender": "Unspecified",
+                "no_of_mbrs": "300"
+            },
+            {
+                "_id": 31,
+                "yr": "2014",
+                "age_grp": "Unspecified",
+                "gender": "Male",
+                "no_of_mbrs": "53000"
+            },
+            {
+                "_id": 32,
+                "yr": "2014",
+                "age_grp": "Unspecified",
+                "gender": "Female",
+                "no_of_mbrs": "40000"
+            },
+            {
+                "_id": 33,
+                "yr": "2014",
+                "age_grp": "Unspecified",
+                "gender": "Unspecified",
+                "no_of_mbrs": "4000"
+            },
+            {
+                "_id": 34,
+                "yr": "2015",
+                "age_grp": "Up to 20",
+                "gender": "Male",
+                "no_of_mbrs": "65000"
+            },
+            {
+                "_id": 35,
+                "yr": "2015",
+                "age_grp": "Up to 20",
+                "gender": "Female",
+                "no_of_mbrs": "61000"
+            },
+            {
+                "_id": 36,
+                "yr": "2015",
+                "age_grp": "Up to 20",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 37,
+                "yr": "2015",
+                "age_grp": ">20 - 25",
+                "gender": "Male",
+                "no_of_mbrs": "126000"
+            },
+            {
+                "_id": 38,
+                "yr": "2015",
+                "age_grp": ">20 - 25",
+                "gender": "Female",
+                "no_of_mbrs": "121000"
+            },
+            {
+                "_id": 39,
+                "yr": "2015",
+                "age_grp": ">20 - 25",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 40,
+                "yr": "2015",
+                "age_grp": ">25 - 30",
+                "gender": "Male",
+                "no_of_mbrs": "134000"
+            },
+            {
+                "_id": 41,
+                "yr": "2015",
+                "age_grp": ">25 - 30",
+                "gender": "Female",
+                "no_of_mbrs": "140000"
+            },
+            {
+                "_id": 42,
+                "yr": "2015",
+                "age_grp": ">25 - 30",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 43,
+                "yr": "2015",
+                "age_grp": ">30 - 35",
+                "gender": "Male",
+                "no_of_mbrs": "144000"
+            },
+            {
+                "_id": 44,
+                "yr": "2015",
+                "age_grp": ">30 - 35",
+                "gender": "Female",
+                "no_of_mbrs": "155000"
+            },
+            {
+                "_id": 45,
+                "yr": "2015",
+                "age_grp": ">30 - 35",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 46,
+                "yr": "2015",
+                "age_grp": ">35 - 40",
+                "gender": "Male",
+                "no_of_mbrs": "156000"
+            },
+            {
+                "_id": 47,
+                "yr": "2015",
+                "age_grp": ">35 - 40",
+                "gender": "Female",
+                "no_of_mbrs": "164000"
+            },
+            {
+                "_id": 48,
+                "yr": "2015",
+                "age_grp": ">35 - 40",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 49,
+                "yr": "2015",
+                "age_grp": ">40 - 45",
+                "gender": "Male",
+                "no_of_mbrs": "171000"
+            },
+            {
+                "_id": 50,
+                "yr": "2015",
+                "age_grp": ">40 - 45",
+                "gender": "Female",
+                "no_of_mbrs": "172000"
+            },
+            {
+                "_id": 51,
+                "yr": "2015",
+                "age_grp": ">40 - 45",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 52,
+                "yr": "2015",
+                "age_grp": ">45 - 50",
+                "gender": "Male",
+                "no_of_mbrs": "182000"
+            },
+            {
+                "_id": 53,
+                "yr": "2015",
+                "age_grp": ">45 - 50",
+                "gender": "Female",
+                "no_of_mbrs": "178000"
+            },
+            {
+                "_id": 54,
+                "yr": "2015",
+                "age_grp": ">45 - 50",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 55,
+                "yr": "2015",
+                "age_grp": ">50 - 55",
+                "gender": "Male",
+                "no_of_mbrs": "213000"
+            },
+            {
+                "_id": 56,
+                "yr": "2015",
+                "age_grp": ">50 - 55",
+                "gender": "Female",
+                "no_of_mbrs": "185000"
+            },
+            {
+                "_id": 57,
+                "yr": "2015",
+                "age_grp": ">50 - 55",
+                "gender": "Unspecified",
+                "no_of_mbrs": "200"
+            },
+            {
+                "_id": 58,
+                "yr": "2015",
+                "age_grp": ">55 - 60",
+                "gender": "Male",
+                "no_of_mbrs": "188000"
+            },
+            {
+                "_id": 59,
+                "yr": "2015",
+                "age_grp": ">55 - 60",
+                "gender": "Female",
+                "no_of_mbrs": "169000"
+            },
+            {
+                "_id": 60,
+                "yr": "2015",
+                "age_grp": ">55 - 60",
+                "gender": "Unspecified",
+                "no_of_mbrs": "100"
+            },
+            {
+                "_id": 61,
+                "yr": "2015",
+                "age_grp": "Above 60",
+                "gender": "Male",
+                "no_of_mbrs": "409000"
+            },
+            {
+                "_id": 62,
+                "yr": "2015",
+                "age_grp": "Above 60",
+                "gender": "Female",
+                "no_of_mbrs": "416000"
+            },
+            {
+                "_id": 63,
+                "yr": "2015",
+                "age_grp": "Above 60",
+                "gender": "Unspecified",
+                "no_of_mbrs": "300"
+            },
+            {
+                "_id": 64,
+                "yr": "2015",
+                "age_grp": "Unspecified",
+                "gender": "Male",
+                "no_of_mbrs": "72000"
+            },
+            {
+                "_id": 65,
+                "yr": "2015",
+                "age_grp": "Unspecified",
+                "gender": "Female",
+                "no_of_mbrs": "58000"
+            },
+            {
+                "_id": 66,
+                "yr": "2015",
+                "age_grp": "Unspecified",
+                "gender": "Unspecified",
+                "no_of_mbrs": "3900"
+            },
+            {
+                "_id": 67,
+                "yr": "2016",
+                "age_grp": "Up to 20",
+                "gender": "Male",
+                "no_of_mbrs": "62000"
+            },
+            {
+                "_id": 68,
+                "yr": "2016",
+                "age_grp": "Up to 20",
+                "gender": "Female",
+                "no_of_mbrs": "57000"
+            },
+            {
+                "_id": 69,
+                "yr": "2016",
+                "age_grp": "Up to 20",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 70,
+                "yr": "2016",
+                "age_grp": ">20 - 25",
+                "gender": "Male",
+                "no_of_mbrs": "128000"
+            },
+            {
+                "_id": 71,
+                "yr": "2016",
+                "age_grp": ">20 - 25",
+                "gender": "Female",
+                "no_of_mbrs": "121000"
+            },
+            {
+                "_id": 72,
+                "yr": "2016",
+                "age_grp": ">20 - 25",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 73,
+                "yr": "2016",
+                "age_grp": ">25 - 30",
+                "gender": "Male",
+                "no_of_mbrs": "140000"
+            },
+            {
+                "_id": 74,
+                "yr": "2016",
+                "age_grp": ">25 - 30",
+                "gender": "Female",
+                "no_of_mbrs": "145000"
+            },
+            {
+                "_id": 75,
+                "yr": "2016",
+                "age_grp": ">25 - 30",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 76,
+                "yr": "2016",
+                "age_grp": ">30 - 35",
+                "gender": "Male",
+                "no_of_mbrs": "139000"
+            },
+            {
+                "_id": 77,
+                "yr": "2016",
+                "age_grp": ">30 - 35",
+                "gender": "Female",
+                "no_of_mbrs": "152000"
+            },
+            {
+                "_id": 78,
+                "yr": "2016",
+                "age_grp": ">30 - 35",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0"
+            },
+            {
+                "_id": 79,
+                "yr": "2016",
+                "age_grp": ">35 - 40",
+                "gender": "Male",
+                "no_of_mbrs": "154000"
+            },
+            {
+                "_id": 80,
+                "yr": "2016",
+                "age_grp": ">35 - 40",
+                "gender": "Female",
+                "no_of_mbrs": "164000"
+            },
+            {
+                "_id": 81,
+                "yr": "2016",
+                "age_grp": ">35 - 40",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 82,
+                "yr": "2016",
+                "age_grp": ">40 - 45",
+                "gender": "Male",
+                "no_of_mbrs": "169000"
+            },
+            {
+                "_id": 83,
+                "yr": "2016",
+                "age_grp": ">40 - 45",
+                "gender": "Female",
+                "no_of_mbrs": "172000"
+            },
+            {
+                "_id": 84,
+                "yr": "2016",
+                "age_grp": ">40 - 45",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 85,
+                "yr": "2016",
+                "age_grp": ">45 - 50",
+                "gender": "Male",
+                "no_of_mbrs": "176000"
+            },
+            {
+                "_id": 86,
+                "yr": "2016",
+                "age_grp": ">45 - 50",
+                "gender": "Female",
+                "no_of_mbrs": "175000"
+            },
+            {
+                "_id": 87,
+                "yr": "2016",
+                "age_grp": ">45 - 50",
+                "gender": "Unspecified",
+                "no_of_mbrs": "0*"
+            },
+            {
+                "_id": 88,
+                "yr": "2016",
+                "age_grp": ">50 - 55",
+                "gender": "Male",
+                "no_of_mbrs": "209000"
+            },
+            {
+                "_id": 89,
+                "yr": "2016",
+                "age_grp": ">50 - 55",
+                "gender": "Female",
+                "no_of_mbrs": "185000"
+            },
+            {
+                "_id": 90,
+                "yr": "2016",
+                "age_grp": ">50 - 55",
+                "gender": "Unspecified",
+                "no_of_mbrs": "100"
+            },
+            {
+                "_id": 91,
+                "yr": "2016",
+                "age_grp": ">55 - 60",
+                "gender": "Male",
+                "no_of_mbrs": "192000"
+            },
+            {
+                "_id": 92,
+                "yr": "2016",
+                "age_grp": ">55 - 60",
+                "gender": "Female",
+                "no_of_mbrs": "172000"
+            },
+            {
+                "_id": 93,
+                "yr": "2016",
+                "age_grp": ">55 - 60",
+                "gender": "Unspecified",
+                "no_of_mbrs": "100"
+            },
+            {
+                "_id": 94,
+                "yr": "2016",
+                "age_grp": "Above 60",
+                "gender": "Male",
+                "no_of_mbrs": "435000"
+            },
+            {
+                "_id": 95,
+                "yr": "2016",
+                "age_grp": "Above 60",
+                "gender": "Female",
+                "no_of_mbrs": "440000"
+            },
+            {
+                "_id": 96,
+                "yr": "2016",
+                "age_grp": "Above 60",
+                "gender": "Unspecified",
+                "no_of_mbrs": "300"
+            },
+            {
+                "_id": 97,
+                "yr": "2016",
+                "age_grp": "Unspecified",
+                "gender": "Male",
+                "no_of_mbrs": "92000"
+            },
+            {
+                "_id": 98,
+                "yr": "2016",
+                "age_grp": "Unspecified",
+                "gender": "Female",
+                "no_of_mbrs": "77000"
+            },
+            {
+                "_id": 99,
+                "yr": "2016",
+                "age_grp": "Unspecified",
+                "gender": "Unspecified",
+                "no_of_mbrs": "3900"
+            },
+            {
+                "_id": 100,
+                "yr": "2017",
+                "age_grp": "Up to 20",
+                "gender": "Male",
+                "no_of_mbrs": "60000"
+            }
+        ],
+        "_links": {
+            "start": "/api/action/datastore_search?resource_id=d_782612851622c1643f94e3789d333e99",
+            "next": "/api/action/datastore_search?resource_id=d_782612851622c1643f94e3789d333e99&offset=100"
+        },
+        "total": 165
+    }
+}
