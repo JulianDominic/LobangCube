@@ -1,0 +1,166 @@
+yr,age_grp,gender,no_of_mbrs
+2014,Up to 20,Male,62000
+2014,Up to 20,Female,61000
+2014,Up to 20,Unspecified,0
+2014,>20 - 25,Male,119000
+2014,>20 - 25,Female,122000
+2014,>20 - 25,Unspecified,0
+2014,>25 - 30,Male,130000
+2014,>25 - 30,Female,136000
+2014,>25 - 30,Unspecified,0
+2014,>30 - 35,Male,145000
+2014,>30 - 35,Female,155000
+2014,>30 - 35,Unspecified,0*
+2014,>35 - 40,Male,157000
+2014,>35 - 40,Female,162000
+2014,>35 - 40,Unspecified,0*
+2014,>40 - 45,Male,173000
+2014,>40 - 45,Female,174000
+2014,>40 - 45,Unspecified,0*
+2014,>45 - 50,Male,192000
+2014,>45 - 50,Female,182000
+2014,>45 - 50,Unspecified,100
+2014,>50 - 55,Male,214000
+2014,>50 - 55,Female,185000
+2014,>50 - 55,Unspecified,200
+2014,>55 - 60,Male,183000
+2014,>55 - 60,Female,165000
+2014,>55 - 60,Unspecified,100
+2014,Above 60,Male,385000
+2014,Above 60,Female,393000
+2014,Above 60,Unspecified,300
+2014,Unspecified,Male,53000
+2014,Unspecified,Female,40000
+2014,Unspecified,Unspecified,4000
+2015,Up to 20,Male,65000
+2015,Up to 20,Female,61000
+2015,Up to 20,Unspecified,0
+2015,>20 - 25,Male,126000
+2015,>20 - 25,Female,121000
+2015,>20 - 25,Unspecified,0
+2015,>25 - 30,Male,134000
+2015,>25 - 30,Female,140000
+2015,>25 - 30,Unspecified,0
+2015,>30 - 35,Male,144000
+2015,>30 - 35,Female,155000
+2015,>30 - 35,Unspecified,0*
+2015,>35 - 40,Male,156000
+2015,>35 - 40,Female,164000
+2015,>35 - 40,Unspecified,0*
+2015,>40 - 45,Male,171000
+2015,>40 - 45,Female,172000
+2015,>40 - 45,Unspecified,0*
+2015,>45 - 50,Male,182000
+2015,>45 - 50,Female,178000
+2015,>45 - 50,Unspecified,0*
+2015,>50 - 55,Male,213000
+2015,>50 - 55,Female,185000
+2015,>50 - 55,Unspecified,200
+2015,>55 - 60,Male,188000
+2015,>55 - 60,Female,169000
+2015,>55 - 60,Unspecified,100
+2015,Above 60,Male,409000
+2015,Above 60,Female,416000
+2015,Above 60,Unspecified,300
+2015,Unspecified,Male,72000
+2015,Unspecified,Female,58000
+2015,Unspecified,Unspecified,3900
+2016,Up to 20,Male,62000
+2016,Up to 20,Female,57000
+2016,Up to 20,Unspecified,0
+2016,>20 - 25,Male,128000
+2016,>20 - 25,Female,121000
+2016,>20 - 25,Unspecified,0
+2016,>25 - 30,Male,140000
+2016,>25 - 30,Female,145000
+2016,>25 - 30,Unspecified,0
+2016,>30 - 35,Male,139000
+2016,>30 - 35,Female,152000
+2016,>30 - 35,Unspecified,0
+2016,>35 - 40,Male,154000
+2016,>35 - 40,Female,164000
+2016,>35 - 40,Unspecified,0*
+2016,>40 - 45,Male,169000
+2016,>40 - 45,Female,172000
+2016,>40 - 45,Unspecified,0*
+2016,>45 - 50,Male,176000
+2016,>45 - 50,Female,175000
+2016,>45 - 50,Unspecified,0*
+2016,>50 - 55,Male,209000
+2016,>50 - 55,Female,185000
+2016,>50 - 55,Unspecified,100
+2016,>55 - 60,Male,192000
+2016,>55 - 60,Female,172000
+2016,>55 - 60,Unspecified,100
+2016,Above 60,Male,435000
+2016,Above 60,Female,440000
+2016,Above 60,Unspecified,300
+2016,Unspecified,Male,92000
+2016,Unspecified,Female,77000
+2016,Unspecified,Unspecified,3900
+2017,Up to 20,Male,60000
+2017,Up to 20,Female,55000
+2017,Up to 20,Unspecified,0
+2017,>20 - 25,Male,128000
+2017,>20 - 25,Female,120000
+2017,>20 - 25,Unspecified,0
+2017,>25 - 30,Male,144000
+2017,>25 - 30,Female,148000
+2017,>25 - 30,Unspecified,0
+2017,>30 - 35,Male,137000
+2017,>30 - 35,Female,150000
+2017,>30 - 35,Unspecified,0
+2017,>35 - 40,Male,154000
+2017,>35 - 40,Female,167000
+2017,>35 - 40,Unspecified,0
+2017,>40 - 45,Male,165000
+2017,>40 - 45,Female,169000
+2017,>40 - 45,Unspecified,0
+2017,>45 - 50,Male,173000
+2017,>45 - 50,Female,175000
+2017,>45 - 50,Unspecified,0
+2017,>50 - 55,Male,202000
+2017,>50 - 55,Female,182000
+2017,>50 - 55,Unspecified,100
+2017,>55 - 60,Male,196000
+2017,>55 - 60,Female,174000
+2017,>55 - 60,Unspecified,100
+2017,Above 60,Male,461000
+2017,Above 60,Female,466000
+2017,Above 60,Unspecified,300
+2017,Unspecified,Male,110000
+2017,Unspecified,Female,95000
+2017,Unspecified,Unspecified,3900
+2018,Up to 20,Male,59000
+2018,Up to 20,Female,55000
+2018,Up to 20,Unspecified,0
+2018,>20 - 25,Male,126000
+2018,>20 - 25,Female,117000
+2018,>20 - 25,Unspecified,0
+2018,>25 - 30,Male,143000
+2018,>25 - 30,Female,146000
+2018,>25 - 30,Unspecified,0
+2018,>30 - 35,Male,143000
+2018,>30 - 35,Female,155000
+2018,>30 - 35,Unspecified,0
+2018,>35 - 40,Male,153000
+2018,>35 - 40,Female,167000
+2018,>35 - 40,Unspecified,0*
+2018,>40 - 45,Male,160000
+2018,>40 - 45,Female,167000
+2018,>40 - 45,Unspecified,0*
+2018,>45 - 50,Male,172000
+2018,>45 - 50,Female,175000
+2018,>45 - 50,Unspecified,0*
+2018,>50 - 55,Male,193000
+2018,>50 - 55,Female,178000
+2018,>50 - 55,Unspecified,100
+2018,>55 - 60,Male,199000
+2018,>55 - 60,Female,176000
+2018,>55 - 60,Unspecified,100
+2018,Above 60,Male,488000
+2018,Above 60,Female,490000
+2018,Above 60,Unspecified,400
+2018,Unspecified,Male,128000
+2018,Unspecified,Female,112000
+2018,Unspecified,Unspecified,3900
