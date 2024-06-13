@@ -96,10 +96,10 @@ if st.session_state["authentication_status"]:
             st.write("## Your Information")
             with st.form("my_form"):
                 housing = ['1&2-Room Flat', '4-Room Flat', '3-Room Flat', '5-Room', 'Executive Flat','Condominium','Landed Property']
-                age = st.number_input("Present Age", min_value=0, max_value=100, value=USER_DATA[2], disabled= True)
-                housing_name = st.selectbox("Current Housing Type", housing, index=housing.index(USER_DATA[3]), disabled=True)
-                housing_type = housing.index(housing_name)
-                cpf = st.number_input("CPF amount", min_value=0, value=round(USER_DATA[4]+USER_DATA[5]+USER_DATA[6]),step=1000, disabled=True)
+                age = st.number_input("Present Age", min_value=0, max_value=100, value=USER_DATA[2], disabled=False)
+                housing_name = st.selectbox("Current Housing Type", housing, index=housing.index(USER_DATA[3]), disabled=False)
+                housing_type = housing_name
+                cpf = st.number_input("CPF amount", min_value=0, value=round(USER_DATA[4]+USER_DATA[5]+USER_DATA[6]),step=1000, disabled=False)
                 income = st.number_input("Monthly Income", min_value=0, value=8000,step=1000)
                 expenditure = st.number_input("Monthly Expenditure", min_value=0, value=5000, step=1000)
                 savings = st.number_input("Savings", min_value=0, value=8000,step=1000)
@@ -107,7 +107,7 @@ if st.session_state["authentication_status"]:
         with col2:
             st.write("## Lobang&sup3; Score")
             lobang_info = [float(arr[0]) for arr in getInfo(age,housing_type,income*12,cpf,expenditure*12,savings)]
-            print(lobang_info)
+            # print(lobang_info)
             lobang_score = getLobang(lobang_info[0],lobang_info[1],lobang_info[2])
             lobang = make_donut(lobang_score,str(lobang_score),"blue")    
             st.altair_chart(lobang,on_select="ignore",use_container_width=True)
@@ -116,15 +116,18 @@ if st.session_state["authentication_status"]:
             st.markdown(f"#### Retirement Readiness: {round(lobang_info[2],1)}/10",help="How ready you are for retirement")
         with col3:
             st.write("## Suggestions")
-            lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
-            lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
-            lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
-            qol_param= lst1[-1]
-            disaster_param = lst2[-1]
-            retirement_param = lst3[-1]
-            st.markdown(f"The biggest factor holding your Quality of Life back is your: {qol_param}")
-            st.markdown(f"The biggest factor holding your Disaster Resistance back is your: {disaster_param}")
-            st.markdown(f"The biggest factor holding your Retirement Readiness back is your: {retirement_param}")
+            lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
+            lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
+            lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
+            st.markdown(f"#### Quality of Life")
+            for i in range(1,4):
+                st.write(f"{i}. {lst1[-i]}")
+            st.markdown(f"#### Disaster Resistance")
+            for i in range(1,4):
+                st.write(f"{i}. {lst2[-i]}")
+            st.markdown(f"#### Retirement Readiness")
+            for i in range(1,4):
+                st.write(f"{i}. {lst3[-i]}")
 
     
 

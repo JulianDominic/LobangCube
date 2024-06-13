@@ -2,6 +2,7 @@ import pickle
 import sqlite3
 import pandas as pd
 import altair as alt
+import numpy as np
 
 df = pd.read_csv('../data/mock_users.csv')
 conn = sqlite3.connect('../data/user_data.db')
@@ -9,18 +10,40 @@ df.to_sql('people', conn, if_exists='replace', index=False)
 
 conn.close()
 
-loaded_qol_model = pickle.load(open("./models/qol_model.pickle", 'rb'))
-loaded_retirement_model = pickle.load(open("./models/retirement_model.pickle", 'rb'))
-loaded_disaster_model = pickle.load(open("./models/disaster_model.pickle", 'rb'))
-loaded_scaler = pickle.load(open("./models/scaler.pickle",'rb'))
+# loaded_qol_model = pickle.load(open("./models/qol_model.pickle", 'rb'))
+# loaded_retirement_model = pickle.load(open("./models/retirement_model.pickle", 'rb'))
+# loaded_disaster_model = pickle.load(open("./models/disaster_model.pickle", 'rb'))
+# loaded_scaler = pickle.load(open("./models/scaler.pickle",'rb'))
+loaded_qol_model = pickle.load(open("./models/model_quality_of_life.pkl", 'rb'))
+loaded_retirement_model = pickle.load(open("./models/model_retirement_readiness.pkl", 'rb'))
+loaded_disaster_model = pickle.load(open("./models/model_disaster_preparedness.pkl", 'rb'))
+loaded_encoder = pickle.load(open("./models/encoder.pkl",'rb'))
+loaded_poly = pickle.load(open("./models/poly.pkl",'rb'))
+with open('./models/scaler.pkl', 'rb') as file:
+    loaded_scaler = pickle.load(file)
+
+def process_data(params):
+    age,housing,income,cpf,exp,saving = params
+    feature_inputs = pd.DataFrame({
+        'age': [age],
+        'housingtype': [housing],
+        'yearly_income': [income],
+        'cpf_balance': [cpf],
+        'yearly_expenditure': [exp],
+        'savings': [saving]
+    })
+    feature_inputs.loc[:, 'housingtype'] = loaded_encoder.transform(feature_inputs[['housingtype']])
+    feature_inputs_poly = loaded_poly.transform(feature_inputs)
+    feature_inputs_scaled = loaded_scaler.transform(feature_inputs_poly)
+    return feature_inputs_scaled
 
 
 def getInfo(age,housing,income,cpf,exp,saving):
-    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
-    print(scaled)
-    qol = loaded_qol_model.predict(scaled)
-    dis = loaded_disaster_model.predict(scaled)
-    ret = loaded_retirement_model.predict(scaled)
+    params = age,housing,income,cpf,exp,saving
+    feature_inputs = process_data([age,housing,income,cpf,exp,saving])
+    qol = loaded_qol_model.predict(feature_inputs)
+    dis = loaded_disaster_model.predict(feature_inputs)
+    ret = loaded_retirement_model.predict(feature_inputs)
     return [qol,dis,ret]
 
 def getLobang(qol,dis,ret):
@@ -78,13 +101,13 @@ def make_donut(input_response, input_text, input_color):
 
 def qol_suggestion(age,housing,income,cpf,exp,saving):
     params = ["age","housing","income","cpf","expenses","savings"]
-    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
+    feature_inputs = process_data([age,housing,income,cpf,exp,saving])
 
-    initial = loaded_qol_model.predict(scaled)
+    initial = loaded_qol_model.predict(feature_inputs)
     
     qol_list = []
-    for i in range(len(scaled[0])):
-        temp = scaled
+    for i in range(len(feature_inputs[0])):
+        temp = feature_inputs
         temp[0][i] += 0.05
         qol_list.append(loaded_qol_model.predict(temp)-initial)
     
@@ -95,12 +118,12 @@ def qol_suggestion(age,housing,income,cpf,exp,saving):
 
 def disaster_suggestion(age,housing,income,cpf,exp,saving):
     params = ["age","housing","income","cpf","expenses","savings"]
-    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
-    initial = loaded_disaster_model.predict(scaled)
+    feature_inputs = process_data([age,housing,income,cpf,exp,saving])
+    initial = loaded_disaster_model.predict(feature_inputs)
     
     disaster_list = []
-    for i in range(len(scaled[0])):
-        temp = scaled
+    for i in range(len(feature_inputs[0])):
+        temp = feature_inputs
         temp[0][i] += 0.05
         disaster_list.append(loaded_disaster_model.predict(temp)-initial)
 
@@ -110,16 +133,14 @@ def disaster_suggestion(age,housing,income,cpf,exp,saving):
 
 def retirement_suggestion(age,housing,income,cpf,exp,saving):
     params = ["age","housing","income","cpf","expenses","savings"]
-    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
-    initial = loaded_retirement_model.predict(scaled)
+    feature_inputs = process_data([age,housing,income,cpf,exp,saving])
+    initial = loaded_retirement_model.predict(feature_inputs)
     
     retirement_list = []
-    for i in range(len(scaled[0])):
-        temp = scaled
+    for i in range(len(feature_inputs[0])):
+        temp = feature_inputs
         temp[0][i] += 0.05
         retirement_list.append(loaded_retirement_model.predict(temp)-initial)
     retirement_list = [float(arr[0]) for arr in retirement_list]
     ans = [x for _, x in sorted(zip(retirement_list, params))]
     return ans
-
-
