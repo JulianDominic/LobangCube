@@ -27,7 +27,7 @@ def getLobang(qol,dis,ret):
     return round(((qol+dis+ret)/3)*10)
 
 def get_user_data(name):
-    # Step 1: Create a connection to the SQLite database
+    # Create a connection to the SQLite database
     conn = sqlite3.connect('../data/user_data.db')
     cursor = conn.cursor()
     query = "SELECT * FROM people WHERE name = ?"
@@ -56,24 +56,22 @@ def make_donut(input_response, input_text, input_color):
       "% value": [100, 0]
   })
     
-  plot = alt.Chart(source).mark_arc(innerRadius=45, cornerRadius=25).encode(
+  plot = alt.Chart(source).mark_arc(innerRadius=60, cornerRadius=25).encode(
       theta="% value",
       color= alt.Color("Topic:N",
                       scale=alt.Scale(
-                          #domain=['A', 'B'],
                           domain=[input_text, ''],
-                          # range=['#29b5e8', '#155F7A']),  # 31333F
                           range=chart_color),
                       legend=None),
-  ).properties(width=130, height=130)
+  ).properties(width=170, height=170)
     
   text = plot.mark_text(align='center', color="#29b5e8", font="Arial", fontSize=32, fontWeight=700, fontStyle="italic").encode(text=alt.value(f'{input_response}'))
-  plot_bg = alt.Chart(source_bg).mark_arc(innerRadius=45, cornerRadius=20).encode(
+  plot_bg = alt.Chart(source_bg).mark_arc(innerRadius=60, cornerRadius=20).encode(
       theta="% value",
       color= alt.Color("Topic:N",
                       scale=alt.Scale(
                           domain=[input_text, ''],
                           range=chart_color),
                       legend=None),
-  ).properties(width=130, height=130)
+  ).properties(width=170, height=170)
   return plot_bg + plot + text

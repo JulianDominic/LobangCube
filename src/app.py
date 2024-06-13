@@ -86,15 +86,24 @@ if st.session_state["authentication_status"]:
             st.write("#### Your Information")
             with st.form("my_form"):
                 housing = ['1&2-Room Flat', '4-Room Flat', '3-Room Flat', '5-Room', 'Executive Flat','Condominium','Landed Property']
-                age = st.number_input("Present Age", min_value=0, max_value=100, value=USER_DATA[2])
-                housing_type = st.selectbox("Current Housing Type", housing, index=housing.index(USER_DATA[3]))
+                age = st.number_input("Present Age", min_value=0, max_value=100, value=USER_DATA[2], disabled= True)
+                housing_name = st.selectbox("Current Housing Type", housing, index=housing.index(USER_DATA[3]), disabled=True)
+                housing_type = housing.index(housing_name)
+                cpf = st.number_input("CPF amount", min_value=0, value=round(USER_DATA[4]+USER_DATA[5]+USER_DATA[6]),step=1000, disabled=True)
                 income = st.number_input("Monthly Income", min_value=0, value=8000,step=1000)
                 expenditure = st.number_input("Monthly Expenditure", min_value=0, value=5000, step=1000)
+                savings = st.number_input("Savings", min_value=0, value=8000,step=1000)
                 submitted = st.form_submit_button("Calculate Score")
         with col2:
             st.write("#### Lobang&sup3; Score")
-            lobang = make_donut(75,"75","blue")
-            st.altair_chart(lobang)
+            lobang_info = [float(arr[0]) for arr in getInfo(age,housing_type,income,cpf,expenditure,savings)]
+            print(lobang_info)
+            lobang_score = getLobang(lobang_info[0],lobang_info[1],lobang_info[2])
+            lobang = make_donut(lobang_score,str(lobang_score),"blue")    
+            st.altair_chart(lobang,on_select="ignore")
+            st.write(f"Quality of Life:{round(lobang_info[0],1)}/10")
+            st.write(f"Disaster Preparedness:{round(lobang_info[1],1)}/10")
+            st.write(f"Retirement Readiness:{round(lobang_info[2],1)}/10")
         with col3:
             st.write("#### Suggestions")
     

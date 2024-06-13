@@ -63,6 +63,7 @@ six==1.16.0
 smmap==5.0.1
 stack-data==0.6.3
 streamlit==1.35.0
+streamlit-authenticator==0.3.2
 tenacity==8.3.0
 threadpoolctl==3.5.0
 toml==0.10.2
