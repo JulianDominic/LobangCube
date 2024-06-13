@@ -144,3 +144,22 @@ def retirement_suggestion(age,housing,income,cpf,exp,saving):
     retirement_list = [float(arr[0]) for arr in retirement_list]
     ans = [x for _, x in sorted(zip(retirement_list, params))]
     return ans
+
+
+def chart(age,housing,income,cpf,exp,saving,ageslider):
+
+    agelist = [i for i in range(ageslider-age)]
+    qol_scorelist = []
+    dis_scorelist = []
+    ret_scorelist = []
+    for i in range(ageslider-age):
+        feature_inputs = process_data([age,housing,income,cpf,exp,saving])
+        ret_scorelist.append(loaded_retirement_model.predict(feature_inputs)[0])
+        qol_scorelist.append(loaded_qol_model.predict(feature_inputs)[0])
+        dis_scorelist.append(loaded_disaster_model.predict(feature_inputs)[0])
+        age+=1
+        cpf+=0.2*income
+        saving+=income*0.8-exp
+
+    df = pd.DataFrame(data = {'age': agelist,'QOL score':qol_scorelist,'Disaster score':dis_scorelist, 'Retirement score': ret_scorelist})
+    return df

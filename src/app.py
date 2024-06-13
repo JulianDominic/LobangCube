@@ -13,6 +13,7 @@ from helper import make_donut
 from helper import qol_suggestion
 from helper import disaster_suggestion
 from helper import retirement_suggestion
+from helper import chart
 
 st.set_page_config(page_title="Are You Ready for Retirement?", page_icon="💰", layout="wide")
 
@@ -115,19 +116,25 @@ if st.session_state["authentication_status"]:
             st.markdown(f"#### Disaster Preparedness: {round(lobang_info[1],1)}/10",help="How safe you are in case of a disaster")
             st.markdown(f"#### Retirement Readiness: {round(lobang_info[2],1)}/10",help="How ready you are for retirement")
         with col3:
-            st.write("## Suggestions")
-            lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
-            lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
-            lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
-            st.markdown(f"#### Quality of Life")
-            for i in range(1,4):
-                st.write(f"{i}. {lst1[-i]}")
-            st.markdown(f"#### Disaster Resistance")
-            for i in range(1,4):
-                st.write(f"{i}. {lst2[-i]}")
-            st.markdown(f"#### Retirement Readiness")
-            for i in range(1,4):
-                st.write(f"{i}. {lst3[-i]}")
+            tab1, tab2 = st.tabs(["Suggestions", "Projection"])
+            with tab1:
+                st.write("## Suggestions")
+                lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
+                lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
+                lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)[-3:]
+                st.markdown(f"#### Quality of Life")
+                for i in range(1,4):
+                    st.write(f"{i}. {lst1[-i]}")
+                st.markdown(f"#### Disaster Resistance")
+                for i in range(1,4):
+                    st.write(f"{i}. {lst2[-i]}")
+                st.markdown(f"#### Retirement Readiness")
+                for i in range(1,4):
+                    st.write(f"{i}. {lst3[-i]}")
+            with tab2:
+                st.write("## Projection")
+                chart_data = chart(age,housing_type,income*12,cpf,expenditure*12,savings,55)
+                st.line_chart(chart_data.set_index('age'))
 
     
 
