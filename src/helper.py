@@ -1,6 +1,7 @@
 import pickle
 import sqlite3
 import pandas as pd
+import numpy as np
 import altair as alt
 
 df = pd.read_csv('../data/mock_users.csv')
@@ -97,6 +98,7 @@ def disaster_suggestion(age,housing,income,cpf,exp,saving):
     params = ["age","housing","income","cpf","expenses","savings"]
     scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
     initial = loaded_disaster_model.predict(scaled)
+    print(initial)
     
     disaster_list = []
     for i in range(len(scaled[0])):
@@ -123,3 +125,21 @@ def retirement_suggestion(age,housing,income,cpf,exp,saving):
     return ans
 
 
+def chart(age,housing,income,cpf,exp,saving,ageslider):
+    
+    agelist = [i for i in range(ageslider-age)]
+    qol_scorelist = []
+    dis_scorelist = []
+    ret_scorelist = []
+    for i in range(ageslider-age):
+        scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
+        ret_scorelist.append(loaded_retirement_model.predict(scaled)[0])
+        qol_scorelist.append(loaded_qol_model.predict(scaled)[0])
+        dis_scorelist.append(loaded_disaster_model.predict(scaled)[0])
+        age+=1
+        cpf+=0.2*income
+        saving+=income*0.8-exp
+
+    df = pd.DataFrame(data = {'age': agelist,'QOL score':qol_scorelist,'Disaster score':dis_scorelist, 'Retirement score': ret_scorelist})
+    return df
+    

@@ -13,6 +13,7 @@ from helper import make_donut
 from helper import qol_suggestion
 from helper import disaster_suggestion
 from helper import retirement_suggestion
+from helper import chart
 
 st.set_page_config(page_title="Are You Ready for Retirement?", page_icon="💰", layout="wide")
 
@@ -71,7 +72,7 @@ if st.session_state["authentication_status"]:
                 margin-top: 20px;
             }
             section[data-testid="stSidebar"] {
-                width: 300px !important;
+                width: 200px !important;
             }
             div[data-testid="column"]:nth-of-type(2)
             {
@@ -91,9 +92,9 @@ if st.session_state["authentication_status"]:
 
     # Input section
     with st.container():
-        col1, col2, col3 = st.columns((2, 4.2, 2), gap='medium')
+        col1, col2, col3 = st.columns((1.8, 3, 3), gap='medium')
         with col1:
-            st.write("## Your Information")
+            st.write("### Your Information")
             with st.form("my_form"):
                 housing = ['1&2-Room Flat', '4-Room Flat', '3-Room Flat', '5-Room', 'Executive Flat','Condominium','Landed Property']
                 age = st.number_input("Present Age", min_value=0, max_value=100, value=USER_DATA[2], disabled= True)
@@ -105,7 +106,7 @@ if st.session_state["authentication_status"]:
                 savings = st.number_input("Savings", min_value=0, value=8000,step=1000)
                 submitted = st.form_submit_button("Calculate Score")
         with col2:
-            st.write("## Lobang&sup3; Score")
+            st.write("### Lobang&sup3; Score")
             lobang_info = [float(arr[0]) for arr in getInfo(age,housing_type,income*12,cpf,expenditure*12,savings)]
             print(lobang_info)
             lobang_score = getLobang(lobang_info[0],lobang_info[1],lobang_info[2])
@@ -115,20 +116,24 @@ if st.session_state["authentication_status"]:
             st.markdown(f"#### Disaster Preparedness: {round(lobang_info[1],1)}/10",help="How safe you are in case of a disaster")
             st.markdown(f"#### Retirement Readiness: {round(lobang_info[2],1)}/10",help="How ready you are for retirement")
         with col3:
-            st.write("## Suggestions")
-            lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
-            lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
-            lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
-            qol_param= lst1[-1]
-            disaster_param = lst2[-1]
-            retirement_param = lst3[-1]
-            st.markdown(f"The biggest factor holding your Quality of Life back is your: {qol_param}")
-            st.markdown(f"The biggest factor holding your Disaster Resistance back is your: {disaster_param}")
-            st.markdown(f"The biggest factor holding your Retirement Readiness back is your: {retirement_param}")
+            tab1, tab2 = st.tabs(["Suggestions", "Projection"])
+            with tab1:
+                st.write("### Suggestions")
+                lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
+                lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
+                lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
+                qol_param= lst1[-1]
+                disaster_param = lst2[-1]
+                retirement_param = lst3[-1]
+                st.markdown(f"The biggest factor holding your Quality of Life back is your: {qol_param}")
+                st.markdown(f"The biggest factor holding your Disaster Resistance back is your: {disaster_param}")
+                st.markdown(f"The biggest factor holding your Retirement Readiness back is your: {retirement_param}")
+            with tab2:
+                st.write("### Projection")
+                chart_data = chart(age,housing_type,income*12,cpf,expenditure*12,savings,55)
+                st.line_chart(chart_data.set_index('age'))
 
     
-
-
 
 
 elif st.session_state["authentication_status"] is False:
