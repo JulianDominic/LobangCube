@@ -73,6 +73,13 @@ if st.session_state["authentication_status"]:
             section[data-testid="stSidebar"] {
                 width: 300px !important;
             }
+            div[data-testid="column"]:nth-of-type(2)
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
         </style>
     """, unsafe_allow_html=True)
@@ -84,9 +91,9 @@ if st.session_state["authentication_status"]:
 
     # Input section
     with st.container():
-        col1, col2, col3 = st.columns((2, 4.2, 2), gap='small')
+        col1, col2, col3 = st.columns((2, 4.2, 2), gap='medium')
         with col1:
-            st.write("#### Your Information")
+            st.write("## Your Information")
             with st.form("my_form"):
                 housing = ['1&2-Room Flat', '4-Room Flat', '3-Room Flat', '5-Room', 'Executive Flat','Condominium','Landed Property']
                 age = st.number_input("Present Age", min_value=0, max_value=100, value=USER_DATA[2], disabled= True)
@@ -98,17 +105,17 @@ if st.session_state["authentication_status"]:
                 savings = st.number_input("Savings", min_value=0, value=8000,step=1000)
                 submitted = st.form_submit_button("Calculate Score")
         with col2:
-            st.write("#### Lobang&sup3; Score")
+            st.write("## Lobang&sup3; Score")
             lobang_info = [float(arr[0]) for arr in getInfo(age,housing_type,income*12,cpf,expenditure*12,savings)]
             print(lobang_info)
             lobang_score = getLobang(lobang_info[0],lobang_info[1],lobang_info[2])
             lobang = make_donut(lobang_score,str(lobang_score),"blue")    
-            st.altair_chart(lobang,on_select="ignore")
-            st.markdown(f"Quality of Life:{round(lobang_info[0],1)}/10",help="Expected quality of life")
-            st.markdown(f"Disaster Preparedness:{round(lobang_info[1],1)}/10",help="How safe you are in case of a disaster")
-            st.markdown(f"Retirement Readiness:{round(lobang_info[2],1)}/10",help="How ready you are for retirement")
+            st.altair_chart(lobang,on_select="ignore",use_container_width=True)
+            st.markdown(f"#### Quality of Life: {round(lobang_info[0],1)}/10",help="Expected quality of life")
+            st.markdown(f"#### Disaster Preparedness: {round(lobang_info[1],1)}/10",help="How safe you are in case of a disaster")
+            st.markdown(f"#### Retirement Readiness: {round(lobang_info[2],1)}/10",help="How ready you are for retirement")
         with col3:
-            st.write("#### Suggestions")
+            st.write("## Suggestions")
             lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
             lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
             lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
