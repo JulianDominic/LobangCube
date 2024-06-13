@@ -10,6 +10,9 @@ from helper import get_user_data
 from helper import getLobang
 from helper import getInfo
 from helper import make_donut
+from helper import qol_suggestion
+from helper import disaster_suggestion
+from helper import retirement_suggestion
 
 st.set_page_config(page_title="Are You Ready for Retirement?", page_icon="💰", layout="wide")
 
@@ -96,16 +99,26 @@ if st.session_state["authentication_status"]:
                 submitted = st.form_submit_button("Calculate Score")
         with col2:
             st.write("#### Lobang&sup3; Score")
-            lobang_info = [float(arr[0]) for arr in getInfo(age,housing_type,income,cpf,expenditure,savings)]
+            lobang_info = [float(arr[0]) for arr in getInfo(age,housing_type,income*12,cpf,expenditure*12,savings)]
             print(lobang_info)
             lobang_score = getLobang(lobang_info[0],lobang_info[1],lobang_info[2])
             lobang = make_donut(lobang_score,str(lobang_score),"blue")    
             st.altair_chart(lobang,on_select="ignore")
-            st.write(f"Quality of Life:{round(lobang_info[0],1)}/10")
-            st.write(f"Disaster Preparedness:{round(lobang_info[1],1)}/10")
-            st.write(f"Retirement Readiness:{round(lobang_info[2],1)}/10")
+            st.markdown(f"Quality of Life:{round(lobang_info[0],1)}/10",help="Expected quality of life")
+            st.markdown(f"Disaster Preparedness:{round(lobang_info[1],1)}/10",help="How safe you are in case of a disaster")
+            st.markdown(f"Retirement Readiness:{round(lobang_info[2],1)}/10",help="How ready you are for retirement")
         with col3:
             st.write("#### Suggestions")
+            lst1 = qol_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
+            lst2 = disaster_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
+            lst3 = retirement_suggestion(age,housing_type,income*12,cpf,expenditure*12,savings)
+            qol_param= lst1[-1]
+            disaster_param = lst2[-1]
+            retirement_param = lst3[-1]
+            st.markdown(f"The biggest factor holding your Quality of Life back is your: {qol_param}")
+            st.markdown(f"The biggest factor holding your Disaster Resistance back is your: {disaster_param}")
+            st.markdown(f"The biggest factor holding your Retirement Readiness back is your: {retirement_param}")
+
     
 
 

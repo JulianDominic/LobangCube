@@ -75,3 +75,51 @@ def make_donut(input_response, input_text, input_color):
                       legend=None),
   ).properties(width=170, height=170)
   return plot_bg + plot + text
+
+def qol_suggestion(age,housing,income,cpf,exp,saving):
+    params = ["age","housing","income","cpf","expenses","savings"]
+    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
+
+    initial = loaded_qol_model.predict(scaled)
+    
+    qol_list = []
+    for i in range(len(scaled[0])):
+        temp = scaled
+        temp[0][i] += 0.05
+        qol_list.append(loaded_qol_model.predict(temp)-initial)
+    
+    qol_list = [float(arr[0]) for arr in qol_list]
+    
+    ans = [x for _, x in sorted(zip(qol_list, params))]
+    return ans
+
+def disaster_suggestion(age,housing,income,cpf,exp,saving):
+    params = ["age","housing","income","cpf","expenses","savings"]
+    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
+    initial = loaded_disaster_model.predict(scaled)
+    
+    disaster_list = []
+    for i in range(len(scaled[0])):
+        temp = scaled
+        temp[0][i] += 0.05
+        disaster_list.append(loaded_disaster_model.predict(temp)-initial)
+
+    disaster_list = [float(arr[0]) for arr in disaster_list]
+    ans = [x for _, x in sorted(zip(disaster_list, params))]
+    return ans
+
+def retirement_suggestion(age,housing,income,cpf,exp,saving):
+    params = ["age","housing","income","cpf","expenses","savings"]
+    scaled = loaded_scaler.transform([[age,housing,income,cpf,exp,saving]])
+    initial = loaded_retirement_model.predict(scaled)
+    
+    retirement_list = []
+    for i in range(len(scaled[0])):
+        temp = scaled
+        temp[0][i] += 0.05
+        retirement_list.append(loaded_retirement_model.predict(temp)-initial)
+    retirement_list = [float(arr[0]) for arr in retirement_list]
+    ans = [x for _, x in sorted(zip(retirement_list, params))]
+    return ans
+
+
