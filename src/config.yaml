@@ -1,0 +1,18 @@
+credentials:
+  usernames:
+    G1613350M:
+      email: myinfotesting@gmail.com
+      name: CHRISTOPHER DAVID LEE
+      password: password1
+    S6556929I:
+      email: myinfotesting@gmail.com
+      name: AHMAD FARIZ BIN SALEH
+      password: password2
+    S9812350D:
+      email: myinfotesting@gmail.com
+      name: ALAKNANDA D/O ABIMANYU
+      password: password3
+cookie:
+  expiry_days: 4
+  key: dashboard
+  name: lobang_cookie
